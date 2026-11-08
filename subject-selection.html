@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Subject Selection - Teacher Portal</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#06A10B" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="header-root"></div>
+  <div id="sidebar-backdrop-root"></div>
+  <div class="app-shell">
+    <div id="sidebar-root"></div>
+    <main class="main-content">
+      <h1 class="page-title">Subject Selection</h1>
+      <div class="placeholder-note" style="margin-bottom:16px;">
+        QR Scanner, Seat Assignment, Answer Sheet Scanning এবং Script Management — এই চারটা পেজ
+        সবসময় একটা নির্দিষ্ট <strong>পরীক্ষা + বিষয়</strong>-এর প্রেক্ষাপটে কাজ করে। এখানে সেটা বেছে নিন বা নতুন সেশন খুলুন।
+      </div>
+
+      <div class="card" style="max-width:520px;">
+        <form id="selectForm">
+          <div class="form-group">
+            <label for="f-exam">পরীক্ষা</label>
+            <select id="f-exam" required></select>
+          </div>
+          <div class="form-group">
+            <label for="f-subject">বিষয়</label>
+            <select id="f-subject" required></select>
+          </div>
+          <div class="form-group">
+            <label for="f-room">রুম</label>
+            <input id="f-room" placeholder="যেমন: Room 204" />
+          </div>
+          <div class="form-group">
+            <label for="f-totalSeats">মোট সিট সংখ্যা</label>
+            <input id="f-totalSeats" type="number" min="1" value="40" />
+          </div>
+          <button type="submit" class="btn btn-primary">সেশন খুলুন / যোগ দিন</button>
+          <div id="selectMessage" style="margin-top:10px;font-size:13px;"></div>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="js/subject-selection.js"></script>
+</body>
+</html>

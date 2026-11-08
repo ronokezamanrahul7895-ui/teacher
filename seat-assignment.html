@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Seat Assignment - Teacher Portal</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#06A10B" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="header-root"></div>
+  <div id="sidebar-backdrop-root"></div>
+  <div class="app-shell">
+    <div id="sidebar-root"></div>
+    <main class="main-content">
+      <h1 class="page-title">Seat Assignment</h1>
+      <div class="card" id="sessionInfoCard"></div>
+
+      <div class="card">
+        <strong>সিট ম্যাপ</strong>
+        <div class="seat-grid" id="seatGrid" style="margin-top:12px;"></div>
+        <div style="margin-top:12px;font-size:12px;color:var(--text-muted);">
+          <span class="badge green" style="margin-right:6px;">&nbsp;</span> বরাদ্দকৃত &nbsp;&nbsp;
+          <span class="badge" style="background:#fafafa;color:var(--text-muted);border:1px solid var(--border-light);">&nbsp;</span> খালি
+        </div>
+      </div>
+
+      <div class="card">
+        <strong>বিস্তারিত তালিকা</strong>
+        <div style="overflow-x:auto;margin-top:10px;">
+          <table>
+            <thead><tr><th>সিট</th><th>স্ক্রিপ্ট আইডি</th><th>সময়</th></tr></thead>
+            <tbody id="assignmentsBody"><tr><td colspan="3" class="placeholder-note">লোড হচ্ছে...</td></tr></tbody>
+          </table>
+        </div>
+        <div class="placeholder-note" style="margin-top:10px;">
+          স্টুডেন্টের নাম এখানে ইচ্ছাকৃতভাবে দেখানো হয় না — শুধু সিট ও স্ক্রিপ্ট আইডি, anonymity নিয়ম অনুযায়ী।
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="js/seat-assignment.js"></script>
+</body>
+</html>

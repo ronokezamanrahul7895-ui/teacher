@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Answer Sheet Scanning - Teacher Portal</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#06A10B" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="header-root"></div>
+  <div id="sidebar-backdrop-root"></div>
+  <div class="app-shell">
+    <div id="sidebar-root"></div>
+    <main class="main-content">
+      <h1 class="page-title">Answer Sheet Scanning</h1>
+      <div class="card" id="sessionInfoCard"></div>
+
+      <div class="card">
+        <div class="placeholder-note" style="margin-bottom:12px;">
+          পরীক্ষা শেষে স্ক্রিপ্টের কভারে থাকা QR কোড স্ক্যান করুন, অথবা স্ক্রিপ্ট আইডি নিজে টাইপ করুন — জমা হিসেবে চিহ্নিত হবে।
+        </div>
+        <div class="scanner-box">
+          <div id="qrReaderRegion"></div>
+        </div>
+        <div style="text-align:center;margin-top:10px;">
+          <button class="btn btn-secondary" id="toggleScanBtn">স্ক্যানার শুরু করুন</button>
+        </div>
+
+        <form id="manualForm" style="margin-top:16px;max-width:360px;">
+          <div class="form-group">
+            <label for="manualScriptId">স্ক্রিপ্ট আইডি (ম্যানুয়াল)</label>
+            <input id="manualScriptId" placeholder="খাতার কভারে ছাপা কোড" />
+          </div>
+          <button type="submit" class="btn btn-primary">জমা হিসেবে চিহ্নিত করুন</button>
+        </form>
+      </div>
+
+      <div class="card scan-result-card" id="resultCard" style="display:none;"></div>
+
+      <div class="card">
+        <strong>এই সেশনের জমাদানের অগ্রগতি</strong>
+        <div id="progressArea" style="margin-top:10px;"><div class="placeholder-note">লোড হচ্ছে...</div></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+  <script type="module" src="js/answer-sheet-scanning.js"></script>
+</body>
+</html>

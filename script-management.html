@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Script Management - Teacher Portal</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#06A10B" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="header-root"></div>
+  <div id="sidebar-backdrop-root"></div>
+  <div class="app-shell">
+    <div id="sidebar-root"></div>
+    <main class="main-content">
+      <h1 class="page-title">Script Management</h1>
+      <div class="card" id="sessionInfoCard"></div>
+
+      <div class="card">
+        <strong>একক স্ক্রিপ্ট খুঁজুন</strong>
+        <div class="search-bar" style="margin-top:10px;">
+          <input type="text" id="lookupBox" placeholder="স্ক্রিপ্ট আইডি (খাতার কভারে ছাপা কোড)" />
+          <button class="btn btn-primary" id="lookupBtn">খুঁজুন</button>
+        </div>
+        <div id="lookupResult"></div>
+      </div>
+
+      <div class="card">
+        <strong>এই সেশনের সব স্ক্রিপ্ট</strong>
+        <div class="search-bar" style="margin-top:10px;">
+          <input type="text" id="filterBox" placeholder="স্ট্যাটাস বা সিট দিয়ে ফিল্টার করুন..." />
+        </div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>স্ক্রিপ্ট আইডি</th><th>সিট</th><th>স্ট্যাটাস</th><th>ইস্যু</th><th>জমা</th></tr></thead>
+            <tbody id="scriptsBody"><tr><td colspan="5" class="placeholder-note">লোড হচ্ছে...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="js/script-management.js"></script>
+</body>
+</html>
